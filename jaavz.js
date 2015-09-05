@@ -7,7 +7,7 @@ $(document).ready(function(){
     console.log(password_value);
   });
 
-  $('input[type="text"][placeholder="Password"]').keyup(function()
+  $('#password_field').keyup(function()
     {
 
 

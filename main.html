@@ -19,7 +19,8 @@
     </span> <br>
     <!-- show password text and button -->
         <span>
-          <span style="font-size:16px">Show Password</span>&nbsp;<input type="checkbox" style="height:20px">
+          <span style="font-size:16px">Show Password</span>&nbsp;
+          <input id="bootstrap_state" type="checkbox">
         </span>
 
   </div>
@@ -35,7 +36,7 @@
 
       <form style="padding-top:15px">
         <input type="text" placeholder="Email" class="textbox" style="margin-bottom:5px;" />
-        <input type="text" placeholder="Password" class="textbox" />
+        <input type="password" id="password_field" placeholder="Password" class="textbox" />
 
         <div id="pass_strength" style="display:none">
           <span style="float:left">Password Strength:</span>
