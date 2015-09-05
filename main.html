@@ -7,27 +7,21 @@
   <link href="style.css" rel="stylesheet"></link>
   <script src="jaavz.js"></script>
   <script src="howitworks.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-switch/3.3.2/css/bootstrap2/bootstrap-switch.css" rel="stylesheet"></link>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-switch/3.3.2/js/bootstrap-switch.js"></script>
+  <script src="switch.js"></script>
+  <link href="switch.css" rel="stylesheet"></link>
 </head>
 
 <body>
-  <div style="margin-left:20px;">
-    <span><h3 style="display:inline-block">Password Strength Widget</h3><p style="display:inline-block">&nbsp;|Tabish Khan</p></span><br>
-    <span class="label label-primary" id="howitworks" data-toggle="popover" data-content="A password is considered strong when:
+  <div style="margin-left:20px;text-align:center">
+    <span><h3 style="display:inline-block;font-weight:100;font-size:45px;margin-top:2px;">Password Strength Widget</h3>   <span class="label label-primary" id="howitworks" data-toggle="popover" style="cursor:pointer">?
+    </span> <br>
+    <!-- show password text and button -->
+        <span>
+          <span style="font-size:16px">Show Password</span>&nbsp;<input type="checkbox" style="height:20px">
+        </span>
 
-It has more than 8 characters
-It has at least one lower case character
-It has at least one upper case character
-It has at least one non alphanumeric character
-It has more than 12 characters
-Each of these criteria gives the password 1 point. A password is considered:
-
-0 points: terrible
-1 points: weak
-2 points: meh meh
-3 points: good
-4 points: strong
-5 points: awesome!">How it Works
-    </span>
   </div>
 
   <!-- <span style="margin-left:110px;background-color:blue;color:white;display:inline-block;display:none", id="howitworksdiv">Hello
@@ -46,7 +40,7 @@ Each of these criteria gives the password 1 point. A password is considered:
         <div id="pass_strength" style="display:none">
           <span style="float:left">Password Strength:</span>
           <span id="pass_status" style="float:right">Terrible</span>
-          <input class="textbox progress-bar-danger" style="height:2px;"></input>
+          <input class="textbox progress-bar-danger" id="bootstrap_bar" style="height:2px;"></input>
         </div>
 
         <input type="button" value="Enter" class="button" />
@@ -55,13 +49,13 @@ Each of these criteria gives the password 1 point. A password is considered:
         <!-- <img class="email" src="email.png"> -->
         <img class="email" src="envelope.png" style="margin-top:-50px;">
         <img class="password" src="password.png" style="left:10px;margin-top:-65px">
-
-      <div>
         
-      </div>
+
     </div>
   </div>
+
 </body>
 
+<!-- http://www.cnn.com/2012/10/25/tech/web/worst-passwords-2012/ -->
 
 
