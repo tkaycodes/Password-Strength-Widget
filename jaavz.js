@@ -65,27 +65,27 @@ $(document).ready(function(){
       // $('#errormessage').html("Password Score: " + password_score);
 
       if (password_score === 0){
-        $('#pass_status').html("Too short");
-        $('#bootstrap_bar').attr("class", "textbox progress-bar-danger");
-      }
-      else if (password_score === 1){
         $('#pass_status').html("Very Weak");
         $('#bootstrap_bar').attr("class", "textbox progress-bar-danger");
       }
-      else if (password_score === 2){
+      else if (password_score === 1){
         $('#pass_status').html("Weak");
-        $('#bootstrap_bar').attr("class", "textbox progress-bar-warning");
+        $('#bootstrap_bar').attr("class", "textbox progress-bar-danger");
       }
-      else if (password_score === 3){
+      else if (password_score === 2){
         $('#pass_status').html("OK");
         $('#bootstrap_bar').attr("class", "textbox progress-bar-warning");
       }
-      else if (password_score === 4){
+      else if (password_score === 3){
         $('#pass_status').html("Good");
+        $('#bootstrap_bar').attr("class", "textbox progress-bar-warning");
+      }
+      else if (password_score === 4){
+        $('#pass_status').html("Strong");
         $('#bootstrap_bar').attr("class", "textbox progress-bar-success");
       }
       else if (password_score === 5){
-        $('#pass_status').html("Strong");
+        $('#pass_status').html("Very Strong");
         $('#bootstrap_bar').attr("class", "textbox progress-bar-success");
       }
     });
