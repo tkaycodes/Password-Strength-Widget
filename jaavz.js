@@ -9,9 +9,11 @@ $(document).ready(function(){
 
   $('input[type="text"][placeholder="Password"]').keyup(function()
     {
+
+
       // appends error message div if dosnt exist already
       if ($('#errormessage').length === 0 ){
-      $('.background').prepend('<div class="textbox" id="errormessage" style="text-align:center;border-radius:0px;border:none;"></div>');
+        $('#pass_strength').slideDown("fast");
       }
 
       // original score
@@ -63,22 +65,25 @@ $(document).ready(function(){
       // $('#errormessage').html("Password Score: " + password_score);
 
       if (password_score === 0){
-        $('#errormessage').html("Password Strength: Terrible").attr("class", "alert alert-danger");
+        $('#pass_status').html("Too short");
       }
       else if (password_score === 1){
-        $('#errormessage').html("Password Strength: Very Weak").attr("class", "alert-danger");
+        $('#pass_status').html("Very Weak");
       }
       else if (password_score === 2){
-        $('#errormessage').html("Password Strength: Weak").attr("class", "alert-warning");
+        $('#pass_status').html("Weak");
+        $(".progress-bar-danger").attr("class", "textbox progress-bar-warning");
       }
       else if (password_score === 3){
-        $('#errormessage').html("Password Strength: Good").attr("class", "alert-info");
+        $('#pass_status').html("OK");
       }
       else if (password_score === 4){
-        $('#errormessage').html("Password Strength: Strong").attr("class", "alert-success");
+        $('#pass_status').html("Good");
+        $(".progress-bar-danger").attr("class", "progress-bar-info textbox");
       }
       else if (password_score === 5){
-        $('#errormessage').html("Password Strength: Very Strong").attr("class", "alert-succes");
+        $('#pass_status').html("Strong");
+        $(".progress-bar-danger").attr("class", "progress-bar-success textbox");
       }
     });
 
