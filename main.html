@@ -11,23 +11,28 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-switch/3.3.2/js/bootstrap-switch.js"></script>
   <script src="switch.js"></script>
   <link href="switch.css" rel="stylesheet"></link>
+  <script src="submitform.js"></script>
 </head>
+
+
+
+
 
 <body>
   <div style="margin-left:20px;text-align:center">
     <span><h3 style="display:inline-block;font-weight:100;font-size:45px;margin-top:2px;">Password Strength Widget</h3>   
-      <span class="label label-primary" id="howitworks" data-toggle="popover" data-trigger="hover" style="cursor:pointer">?
-    </span> <br>
-    <!-- show password text and button -->
-        <span>
-          <span style="font-size:16px">Show Password</span>&nbsp;
-          <input id="bootstrap_state" type="checkbox">
-        </span>
-
+    <span class="label label-primary" id="howitworks" data-toggle="popover" data-trigger="hover" style="cursor:pointer">?
+    </span><br>
+       <p style='letter-spacing:2px';>Note: Make sure you dont choose passwords like <a href="http://www.cnn.com/2012/10/25/tech/web/worst-passwords-2012/">these ones</a></p>
+       <hr>
+       <span>
+        <span style="font-size:20px">Show Password</span>
+        <input id="bootstrap_state" type="checkbox">
+      </span>
   </div>
 
   <!-- <span style="margin-left:110px;background-color:blue;color:white;display:inline-block;display:none", id="howitworksdiv">Hello
-</span> -->
+  </span> -->
 
   <div class="background">
     <div class="container" style="height:350px">
@@ -35,7 +40,7 @@
         <h1>Login</h1>
       </header>
 
-      <form style="padding-top:15px">
+      <form style="padding-top:15px" id="submit_form">
         <input type="text" placeholder="Email" class="textbox" style="margin-bottom:5px;" />
         <input type="password" id="password_field" placeholder="Password" class="textbox" />
 
@@ -45,17 +50,17 @@
           <input class="textbox progress-bar-danger" id="bootstrap_bar" style="height:2px;"></input>
         </div>
 
-        <input type="button" value="Enter" class="button" />
+        <input type="submit" value="Enter" class="button" />
       </form>
       
         <!-- <img class="email" src="email.png"> -->
         <img class="email" src="envelope.png" style="margin-top:-50px;">
         <img class="password" src="password.png" style="left:10px;margin-top:-65px">
-        
-
+      
     </div>
+     <!-- show password text and button -->
+    
   </div>
-
 </body>
 
 <!-- http://www.cnn.com/2012/10/25/tech/web/worst-passwords-2012/ -->

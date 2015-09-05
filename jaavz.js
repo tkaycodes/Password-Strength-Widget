@@ -89,15 +89,10 @@ $(document).ready(function(){
         $('#bootstrap_bar').attr("class", "textbox progress-bar-success");
       }
     });
+  
 
 
 
 });
 
 
-// 0 points: terrible
-// 1 points: weak
-// 2 points: meh meh
-// 3 points: good
-// 4 points: strong
-// 5 points: awesome!
